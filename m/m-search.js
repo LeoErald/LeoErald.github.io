@@ -57,36 +57,15 @@ function searchOnKeyUp(keycode, value, element) {
                     {
                         if (res[i]["media_type"] == "movie")
                         {
-                             if (res[i]["poster_path"] == null)
-                            {
-                                $(element).append(" <a tabindex='1' class='list-group-item list-group-item-action h5 d-flex justify-content-between align-items-center ' href='/movie/movie/" + res[i]["id"] + "'><span style='height:60px;width:40px;text-align:center;background-color: lightgrey' class='mr-3'><i style='margin-top:45%' class='fas fa-film fa-lg'></i></span>" + res[i]["title"] + " <small class='text-muted ml-1'> ("+ res[i]["release_date"].slice(0, 4) + ")</small><span class='badge ml-auto'><i class='fas fa-film fa-lg'></i></span></a>");
-                            }
-                            else
-                            {
-                                $(element).append(" <a tabindex='1' class='list-group-item list-group-item-action h5 d-flex justify-content-between align-items-center ' href='/movie/movie/" + res[i]["id"] + "'><img height='60px' src='https://image.tmdb.org/t/p/w92" + res[i]["poster_path"] + "' class='mr-3'/>" + res[i]["title"] + " <small class='text-seccondary ml-1'> ("+ res[i]["release_date"].slice(0, 4) + ")</small><span class='badge ml-auto'><i class='fas fa-film fa-lg'></i></span></a>");
-                            }  
+                            $(element).append(" <a tabindex='1' class='list-group-item list-group-item-action h5 d-flex justify-content-between align-items-center ' href='/movie/movie/" + res[i]["id"] + "'>" + res[i]["title"] + " <small class='text-seccondary ml-1'> ("+ res[i]["release_date"].slice(0, 4) + ")</small><span class='badge ml-auto'><i class='fas fa-film fa-lg'></i></span></a>");  
                         }
                         else if (res[i]["media_type"] == "tv")
                         {
-                             if (res[i]["poster_path"] == null)
-                            {
-                                $(element).append(" <a tabindex='1' class='list-group-item list-group-item-action h5 d-flex justify-content-between align-items-center ' href='/tv/tv/" + res[i]["id"] + "'><span style='height:60px;width:40px;text-align:center;background-color: lightgrey' class='mr-3'><i style='margin-top:45%' class='fas fa-tv fa-lg'></i></span>" + res[i]["name"] + "<span class='badge ml-auto'><i class='fas fa-tv fa-lg'></i></span></a>");
-                            }
-                            else
-                            {
-                                $(element).append(" <a tabindex='1' class='list-group-item list-group-item-action h5 d-flex justify-content-between align-items-center ' href='/tv/tv/" + res[i]["id"] + "'><img height='60px' src='https://image.tmdb.org/t/p/w92" + res[i]["poster_path"] + "' class='mr-3'/>" + res[i]["name"] + "<span class='badge ml-auto'><i class='fas fa-tv fa-lg'></i></span></a>");
-                            }  
+                            $(element).append(" <a tabindex='1' class='list-group-item list-group-item-action h5 d-flex justify-content-between align-items-center ' href='/tv/tv/" + res[i]["id"] + "'>" + res[i]["name"] + "<span class='badge ml-auto'><i class='fas fa-tv fa-lg'></i></span></a>");  
                         }
                          else if (res[i]["media_type"] == "person")
                         {
-                             if (res[i]["profile_path"] == null)
-                            {
-                                $(element).append(" <a tabindex='1' class='list-group-item list-group-item-action h5 d-flex justify-content-between align-items-center ' href='/people/person/" + res[i]["id"] + "'><span style='height:60px;width:40px;text-align:center;background-color: lightgrey' class='mr-3'><i style='margin-top:45%' class='fas fa-user fa-lg'></i></span>" + res[i]["name"] + "<span class='badge ml-auto'><i class='fas fa-user fa-lg'></i></span></a>");
-                            }
-                            else
-                            {
-                                $(element).append(" <a tabindex='1' class='list-group-item list-group-item-action h5 d-flex justify-content-between align-items-center ' href='/people/person/" + res[i]["id"] + "'><img height='60px' src='https://image.tmdb.org/t/p/w92" + res[i]["profile_path"] + "' class='mr-3'/>" + res[i]["name"] + "<span class='badge ml-auto'><i class='fas fa-user fa-lg'></i></span></a>");
-                            }  
+                            $(element).append(" <a tabindex='1' class='list-group-item list-group-item-action h5 d-flex justify-content-between align-items-center ' href='/people/person/" + res[i]["id"] + "'>" + res[i]["name"] + "<span class='badge ml-auto'><i class='fas fa-user fa-lg'></i></span></a>");
                         }
                     }
                 }

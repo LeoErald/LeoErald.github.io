@@ -213,7 +213,6 @@ pointer-events: none;
 }
 
 
-
 #loading {
     display: block;
     /*position: absolute;
@@ -317,4 +316,5 @@ pointer-events: none;
   padding-right: 30px!important;
   padding-left: 30px!important;
 }
+
 
